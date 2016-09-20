@@ -5,9 +5,17 @@
     - Index
 {% endblock title %}
 
+    
+
 {% block content %}
 
-
+        {% for artist in artists %}
+            <li class="list-group-item">
+                    <a href="{{artist.get_absolute_url}}">
+                        {{artist.name}}               
+                    </a>
+            </li>
+        {% endfor %}
 
 
 {% endblock content %}

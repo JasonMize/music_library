@@ -1,26 +1,26 @@
 from django.shortcuts import render, get_object_or_404
 
-# from .models import Artist
+from .models import Artist
 
 def index(request):
 
-    # music = music.objects.all()
+    # artists = Artist.objects.all()
 
-    # context = {
-    #     "music" = music
-    # }
+    context = {
+        # "artists" = artists
+    }
 
-    return render (request, "music/index.html")
+    return render (request, "music/index.html", context)
 
 
 # def Artists (request, id):
-#     artists = get_object_or_404(Student, pk=id)
+#     artists = get_object_or_404(Artist, pk=id)
 
 #     context = {
-#         "students":students
+#         "artists":artists
 #     }
 
-#     return render (request, "students/student.html", context)
+#     return render (request, "music/artist.html", context)
 
 
 

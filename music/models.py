@@ -27,7 +27,7 @@ class Artist (models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse ("music:music", kwargs={"id":self.pk})
+        return reverse ("artists:detail", kwargs={"id":self.pk})
 
 
 class Album (models.Model):
